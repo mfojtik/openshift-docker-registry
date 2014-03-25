@@ -9,4 +9,4 @@ prod:
     secret_key: openshiftexample123
     s3_encrypt: true
     s3_secure: true
-    storage_path: _env:OPENSHIFT_DATA_DIR
+    storage_path: "_env:OPENSHIFT_DATA_DIR:/images"

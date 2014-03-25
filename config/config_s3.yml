@@ -1,0 +1,12 @@
+prod:
+    storage: s3
+    boto_bucket: _env:AWS_BUCKET
+    s3_access_key: _env:AWS_KEY
+    s3_secret_key: _env:AWS_SECRET
+    s3_bucket: _env:AWS_BUCKET
+    s3_encrypt: true
+    s3_secure: true
+    secret_key: openshiftexample123
+    s3_encrypt: true
+    s3_secure: true
+    storage_path: _env:OPENSHIFT_DATA_DIR

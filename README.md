@@ -10,8 +10,10 @@ repository for Docker images (see [docker-registry](https://github.com/dotcloud/
 
 ## Installation
 
-Docker registry is a Python application, so to start we need to create a python
-app:
+First you need to have the [OpenShift](https://openshift.redhat.com/app/account/new)
+account.
+Since docker-registry is a Python application, for the start we need to create
+the python app:
 
 ```
 rhc app create registry python-2.7

@@ -1,4 +1,5 @@
-prod:
+common:
+    secret_key: _env:OPENSHIFT_SECRET_TOKEN
     storage: s3
     boto_bucket: _env:AWS_BUCKET
     s3_access_key: _env:AWS_KEY
@@ -9,4 +10,3 @@ prod:
     s3_encrypt: true
     s3_secure: true
     storage_path: "_env:OPENSHIFT_DATA_DIR:/images"
-secret_key: _env:OPENSHIFT_SECRET_TOKEN

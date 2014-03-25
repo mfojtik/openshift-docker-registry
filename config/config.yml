@@ -6,7 +6,7 @@ prod:
     s3_bucket: _env:AWS_BUCKET
     s3_encrypt: true
     s3_secure: true
-    secret_key: openshiftexample123
+    secret_key: _env:OPENSHIFT_SECRET_TOKEN
     s3_encrypt: true
     s3_secure: true
     storage_path: "_env:OPENSHIFT_DATA_DIR:/images"

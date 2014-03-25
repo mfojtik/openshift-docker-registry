@@ -1,0 +1,3 @@
+#!/bin/bash
+
+mkdir -p ${OPENSHIFT_DATA_DIR}/images

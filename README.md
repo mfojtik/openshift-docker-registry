@@ -3,11 +3,6 @@
 This quickstart will allow you to run your own [Docker](http://docker.io)
 repository for Docker images (see [docker-registry](https://github.com/dotcloud/docker-registry)).
 
-## ! Bugs !
-
-* This quickstart does not work at the present because `xz-devel` dependency is
-  not available. This should be fixed shortly.
-
 ## Installation
 
 First you need to have the [OpenShift](https://openshift.redhat.com/app/account/new)
@@ -77,6 +72,10 @@ Now to pull your image from repository you can do:
 ```
 $ docker pull registry-mfojtik.dev.rhcloud.com:8000/busybox
 ```
+
+## TODO
+
+* Add authentication
 
 ## Notes
 

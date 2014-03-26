@@ -5,7 +5,7 @@ repository for Docker images (see [docker-registry](https://github.com/dotcloud/
 
 ## Installation
 
-First you need to have the [OpenShift](https://openshift.redhat.com/app/account/new)
+First, you need to have the [OpenShift](https://openshift.redhat.com/app/account/new)
 account.
 Since docker-registry is a Python application, for the start we need to create
 the python app:
@@ -39,7 +39,7 @@ git pull -s recursive -X theirs upstream master
 git push
 ```
 
-Installing dependencies will take some time, but when it finished, you should
+Installing dependencies will take some time, but when it finishes, you should
 have the Docker registry running at `http://registry-NAMESPACE.rhcloud.com`.
 
 ## How to use it
@@ -54,7 +54,7 @@ $ docker tag busybox registry-mfojtik.rhcloud.com:8000/busybox
 $ docker push registry-mfojtik.rhcloud.com:8000/busybox
 ```
 
-The output should be following:
+The output should be as follows:
 
 ```
 The push refers to a repository [registry-mfojtik.rhcloud.com:8000/busybox] (len: 1)
@@ -81,11 +81,11 @@ $ docker pull registry-mfojtik.dev.rhcloud.com:8000/busybox
 
 ## Notes
 
-For now, this quickstart is using [gunicorn](http://gunicorn.org) web server
+For now, this quickstart is using the [gunicorn](http://gunicorn.org) web server
 instead of default Apache/WSGI. The reason is that registry use `gevent`
 library that require more complex threading that cannot be handled right now
-using the WSGI approach. I found not problems by using this approach, but if
-you found some bug, please fill an issue.
+using the WSGI approach. I didn't find any problems when using this approach, but if
+you find a bug, please fill an issue.
 
 ## License
 

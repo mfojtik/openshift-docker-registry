@@ -3,11 +3,6 @@
 This quickstart will allow you to run your own [Docker](http://docker.io)
 repository for Docker images (see [docker-registry](https://github.com/dotcloud/docker-registry)).
 
-## ! Bugs !
-
-* This quickstart does not work at the present because `xz-devel` dependency is
-  not available. This should be fixed shortly.
-
 ## Installation
 
 First you need to have the [OpenShift](https://openshift.redhat.com/app/account/new)
@@ -55,21 +50,21 @@ your images into Docker registry running on OpenShift you need to do following:
 
 ```
 $ docker pull busybox
-$ docker tag busybox registry-mfojtik.dev.rhcloud.com:8000/busybox
-$ docker push registry-mfojtik.dev.rhcloud.com:8000/busybox
+$ docker tag busybox registry-mfojtik.rhcloud.com:8000/busybox
+$ docker push registry-mfojtik.rhcloud.com:8000/busybox
 ```
 
 The output should be following:
 
 ```
-The push refers to a repository [registry-mfojtik.dev.rhcloud.com:8000/busybox] (len: 1)
+The push refers to a repository [registry-mfojtik.rhcloud.com:8000/busybox] (len: 1)
 Sending image list
-Pushing repository registry-mfojtik.dev.rhcloud.com:8000/busybox (1 tags)
+Pushing repository registry-mfojtik.rhcloud.com:8000/busybox (1 tags)
 511136ea3c5a: Image successfully pushed
 bf747efa0e2f: Image successfully pushed
 48e5f45168b9: Image successfully pushed
 769b9341d937: Image successfully pushed
-Pushing tag for rev [769b9341d937] on {http://registry-mfojtik.dev.rhcloud.com:8000/v1/repositories/busybox/tags/latest}
+Pushing tag for rev [769b9341d937] on {http://registry-mfojtik.rhcloud.com:8000/v1/repositories/busybox/tags/latest}
 ```
 
 Now to pull your image from repository you can do:
@@ -77,6 +72,11 @@ Now to pull your image from repository you can do:
 ```
 $ docker pull registry-mfojtik.dev.rhcloud.com:8000/busybox
 ```
+
+## TODO
+
+* Add authentication
+* Fix restarting of gunicorn
 
 ## Notes
 

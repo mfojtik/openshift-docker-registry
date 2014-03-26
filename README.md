@@ -55,21 +55,21 @@ your images into Docker registry running on OpenShift you need to do following:
 
 ```
 $ docker pull busybox
-$ docker tag busybox registry-mfojtik.dev.rhcloud.com:8000/busybox
-$ docker push registry-mfojtik.dev.rhcloud.com:8000/busybox
+$ docker tag busybox registry-mfojtik.rhcloud.com:8000/busybox
+$ docker push registry-mfojtik.rhcloud.com:8000/busybox
 ```
 
 The output should be following:
 
 ```
-The push refers to a repository [registry-mfojtik.dev.rhcloud.com:8000/busybox] (len: 1)
+The push refers to a repository [registry-mfojtik.rhcloud.com:8000/busybox] (len: 1)
 Sending image list
-Pushing repository registry-mfojtik.dev.rhcloud.com:8000/busybox (1 tags)
+Pushing repository registry-mfojtik.rhcloud.com:8000/busybox (1 tags)
 511136ea3c5a: Image successfully pushed
 bf747efa0e2f: Image successfully pushed
 48e5f45168b9: Image successfully pushed
 769b9341d937: Image successfully pushed
-Pushing tag for rev [769b9341d937] on {http://registry-mfojtik.dev.rhcloud.com:8000/v1/repositories/busybox/tags/latest}
+Pushing tag for rev [769b9341d937] on {http://registry-mfojtik.rhcloud.com:8000/v1/repositories/busybox/tags/latest}
 ```
 
 Now to pull your image from repository you can do:

@@ -77,6 +77,7 @@ $ docker pull registry-mfojtik.dev.rhcloud.com:8000/busybox
 
 * Add authentication
 * Fix restarting of gunicorn
+* Removed bundled 'backports' once the `xz-devel` RPM is available
 
 ## Notes
 

@@ -76,6 +76,7 @@ $ docker pull registry-mfojtik.dev.rhcloud.com:8000/busybox
 ## TODO
 
 * Add authentication
+* Fix restarting of gunicorn
 
 ## Notes
 

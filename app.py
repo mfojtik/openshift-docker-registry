@@ -25,7 +25,6 @@ def exit_handler(signal, frame):
 
 try:
     signal.signal(signal.SIGTERM, exit_handler)
-    print gunicorn_cmd
     app = Popen(" ".join(gunicorn_cmd), stdout=PIPE, stderr=PIPE, shell=True)
     unicorn_pid = app.pid
     print "Starting Gunicorn(%i) workers" % unicorn_pid
